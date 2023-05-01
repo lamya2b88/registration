@@ -14,7 +14,7 @@ const CssTextField = styled(TextField)({
   },
 });
 
-const DateOfBirth = () => {
+const DateOfBirth = ({ handelchange }) => {
   return (
     <>
       <fieldset
@@ -22,6 +22,7 @@ const DateOfBirth = () => {
       >
         <legend>Date Of Birth</legend>
         <CssTextField
+          onChange={handelchange}
           type="date"
           size="small"
           variant="outlined"

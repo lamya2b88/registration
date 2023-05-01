@@ -140,11 +140,11 @@ const StyleSlider = styled(Slider)(({ theme }) => ({
   // },
 }));
 
-export default function CustomizedSlider() {
+export default function CustomizedSlider({ handelchange }) {
   return (
     <Box sx={{ width: "50ch" }}>
       <Typography gutterBottom>Is there any payment delay?</Typography>
-      <StyleSlider defaultValue={50}  marks={marks}  />
+      <StyleSlider onChange={handelchange} defaultValue={50} marks={marks} />
     </Box>
   );
 }
